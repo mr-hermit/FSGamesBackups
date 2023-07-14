@@ -1,3 +1,4 @@
 $date = Get-Date -Format "yyyyMMdd-HHmm"
+$userappdata = [Environment]::GetFolderPath('ApplicationData')
 
-Compress-Archive -Path C:\Users\zolotko\AppData\Roaming\EldenRing\76561199402929558 -DestinationPath C:\Users\zolotko\Desktop\EldenRing\backup-$date.zip
+Compress-Archive -Path $userappdata\EldenRing\ -DestinationPath C:\Users\zolotko\Desktop\EldenRing\backup-$date.zip
